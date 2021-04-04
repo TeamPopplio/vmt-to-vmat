@@ -1,6 +1,6 @@
 {
   "name": "vmt-to-vmat",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Basic bulk converter for VMT Materials to VMAT Materials.",
   "main": "index.js",
   "scripts": {

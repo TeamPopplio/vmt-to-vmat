@@ -40,18 +40,18 @@ function parse(file, argv) {
 		if(argv.shader) vmat = vmat.replace("vr_simple.vfx",argv.shader)
 		if(!fs.existsSync(dirs)) fs.mkdirSync(dirs, { recursive: true })
 		// albedo maps
-		if(retArr.basetexture) {
+		if(retArr.basetexture && !argv.color) {
 			vmat = vmat.replace("blank_color",retArr.basetexture+"_color").replace(/\\/g,"/")
 			vtfparse(retArr.basetexture, "_color", argv)
 		}
 		// normal maps
-		if(retArr.bumpmap) {
+		if(retArr.bumpmap && !argv.rough) {
 			vmat = vmat.replace("blank_normal",retArr.basetexture+"_normal").replace(/\\/g,"/")
 			vtfparse(retArr.bumpmap, "_normal", argv)
 		}
 		// roughness maps
 		// source does not have roughness maps, this code may never be used
-		if(retArr.roughness) {
+		if(retArr.roughness && !argv.normal) {
 			vmat = vmat.replace("blank_rough",retArr.basetexture+"_rough").replace(/\\/g,"/")
 			vtfparse(retArr.bumpmap, "_rough", argv)
 		}
