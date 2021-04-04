@@ -91,7 +91,7 @@ function vtfparse(basetexture, suffix, argv) {
 	const dirs2 = path.dirname(path.format(path.parse(argv.output+"\\"+vtf+".vtf")))
 	if(!fs.existsSync(dirs2)) fs.mkdirSync(dirs2, { recursive: true }) // file structure is usually never here so just being safe
 	const args = [argv.vtfcmd, out, dirs2]
-	if(fs.existsSync(out) && !fs.existsSync((argv.output+"/"+vtf+suffix+".png").replace(/\\/g,"/"))) {
+	if(fs.existsSync(out) && !fs.existsSync((argv.output+"/"+vtf+suffix+".tga").replace(/\\/g,"/"))) {
 		const ex = child_process.spawnSync(__dirname+"\\start.bat",args, // yep that's a batch file, vtfcmd does **not** work with child_process for some reason
 		{
 			stdio: 'pipe',
@@ -107,10 +107,10 @@ function vtfparse(basetexture, suffix, argv) {
 			return false;
 		}
 		
-		if(fs.existsSync((argv.output+"/"+vtf+".png").replace(/\\/g,"/")))
+		if(fs.existsSync((argv.output+"/"+vtf+".tga").replace(/\\/g,"/")))
 		{
-			fs.renameSync((argv.output+"/"+vtf+".png").replace(/\\/g,"/"), (argv.output+"/"+vtf+suffix+".png").replace(/\\/g,"/"))
-			if(!argv.silent) console.log(vtf+".vtf -> "+vtf+suffix+".png")
+			fs.renameSync((argv.output+"/"+vtf+".tga").replace(/\\/g,"/"), (argv.output+"/"+vtf+suffix+".tga").replace(/\\/g,"/"))
+			if(!argv.silent) console.log(vtf+".vtf -> "+vtf+suffix+".tga")
 		}
 	}
 	return true;
