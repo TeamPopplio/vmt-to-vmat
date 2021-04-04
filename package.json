@@ -1,0 +1,34 @@
+{
+  "name": "vmt-to-vmat",
+  "version": "1.0.0",
+  "description": "Basic bulk converter for VMT Materials to VMAT Materials.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TeamPopplio/vmt-to-vmat.git"
+  },
+  "keywords": [
+    "source2",
+    "halflifealyx",
+    "hlvr",
+    "vmt",
+    "vmat",
+    "vtf"
+  ],
+  "author": "KiwifruitDev",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/TeamPopplio/vmt-to-vmat/issues"
+  },
+  "homepage": "https://github.com/TeamPopplio/vmt-to-vmat",
+  "dependencies": {
+    "minimist": "^1.2.5",
+    "node-vmt-parser": "TeamPopplio/node-vmt-parser"
+  },
+  "bin": {
+    "vmttovmat": "./cli.js"
+  }
+}
