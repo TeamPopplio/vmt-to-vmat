@@ -28,7 +28,7 @@ vmttovmat --output="C:\Program Files (x86)\Steam\steamapps\common\Half-Life Alyx
     * Sets the output Source 2 materials directory (Required)
 * --vtfcmd
     * Sets the path to VTFCmd.exe
-* --noVMT
+* --novmt
     * Disables .vmt conversion
 * --novtf
     * Disables .vtf conversion
@@ -60,3 +60,7 @@ Other VMT-specific options will not carry over, please see ``vmat_template.vmat`
 [node-vmt-parser](https://github.com/LuisFalk/node-vmt-parser/) (A [fork of this](https://github.com/TeamPopplio/node-vmt-parser) is used for better compatibility with Half-Life: Source materials)
 
 [minimist](https://github.com/substack/minimist)
+
+## License
+
+This software is licensed under the [MIT License](https://opensource.org/licenses/MIT).

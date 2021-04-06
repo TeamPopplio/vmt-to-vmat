@@ -1,6 +1,6 @@
 {
   "name": "vmt-to-vmat",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Basic bulk converter for VMT Materials to VMAT Materials.",
   "main": "index.js",
   "scripts": {
@@ -19,7 +19,7 @@
     "vtf"
   ],
   "author": "KiwifruitDev",
-  "license": "GPL-3.0",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/TeamPopplio/vmt-to-vmat/issues"
   },
