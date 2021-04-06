@@ -4,7 +4,7 @@ This CLI Node.js application converts the .vmt and .vtf data from Source engine 
 
 The tool was designed to make [importing Source engine .vmf map data into Source 2](https://developer.valvesoftware.com/wiki/Half-Life:_Alyx_Workshop_Tools/Importing_Source_1_Maps) a lot easier as the material data is not kept persistent.
 
-## Installation
+## Installation / Updating
 
 ```
 npm install TeamPopplio/vmt-to-vmat -g
@@ -28,19 +28,26 @@ vmttovmat --output="C:\Program Files (x86)\Steam\steamapps\common\Half-Life Alyx
     * Sets the output Source 2 materials directory (Required)
 * --vtfcmd
     * Sets the path to VTFCmd.exe
+* --noVMT
+    * Disables .vmt conversion
+* --novtf
+    * Disables .vtf conversion
+* --overwrite
+    * Overwrite existing files
 * --shader
     * Replaces the shader used in the VMAT (Default is "vr_simple.vfx")
 * --color
-    * Overrides the albedo map material (Default is "materials/blank_color.tga" or the "$basetexture" parameter)
+    * Overrides the albedo map material (Default is "materials/default/default_color.tga" or the "$basetexture" parameter)
 * --normal
-    * Overrides the normal map material (Default is "materials/blank_normal.tga" or the "$bumpmap" parameter)
+    * Overrides the normal map material (Default is "materials/default/default_normal.tga" or the "$bumpmap" parameter)
 * --rough
-    * Overrides the roughness map material (Default is "materials/blank_rough.tga" or the "$roughness" parameter)
+    * Overrides the roughness map material (Default is "materials/default/default_rough.tga" or the "$roughness" parameter)
     * Note: Roughness maps do not normally exist in Source 1, therefore the default roughness map may be undesirable!
 * --debug
     * Enables output for VTFCmd
 * --silent
     * Removes all output when executing
+
 
 ## To-do
 

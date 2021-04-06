@@ -4,7 +4,7 @@ const argv = require('minimist')(process.argv.slice(2)), // command line argumen
 	startTime = Date.now(),
     vmttovmat = require("./index");
 
-if(argv.vtfcmd == undefined) return console.error("You must specify the path to the vtfcmd executable with --vtfcmd=<path>.")
+if(argv.vtfcmd == undefined && !argv.novtf) return console.error("You must specify the path to the vtfcmd executable with --vtfcmd=<path>.")
 if(argv.output == undefined) return console.error("You must specify the output folder (S2 materials) with --output=<path>.")
 if(argv.input == undefined) return console.error("You must specify the input folder (S1 materials) with --input=<path>.")
 else {
